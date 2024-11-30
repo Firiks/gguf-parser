@@ -78,8 +78,8 @@ class GGUFParser:
 
             # Read the version
             self.version = struct.unpack("I", f.read(4))[0]
-            if self.version != 3:
-                raise GGUFParseError("Unsupported version")
+            # if self.version != 3:
+            #    raise GGUFParseError("Unsupported version")
 
             # Read the number of tensors and metadata key-value pairs
             tensor_count = struct.unpack("Q", f.read(8))[0]
